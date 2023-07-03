@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box1{
+    width: 330px;
+    height: 330px;
+    background-color: tomato;
+    border: 1px solid black;
+    border-radius: 50%;
+    /* border-radius: 56% 44% 71% 29% / 46% 64% 36% 54% ; */
+    animation: animateSquare 12s linear infinite;
+}
+.box2{
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,29,1) 35%, rgba(0,212,255,1) 100%);
+    border: 1px solid black;
+    border-radius: 50%;
+    /* border-radius: 56% 44% 71% 29% / 46% 64% 36% 54% ; */
+    animation: animateSquare2 15s linear infinite;
+}
+.box3{
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+    border: 10px dotted cadetblue;
+    border-radius: 50%;
+    /* border-radius: 56% 44% 71% 29% / 46% 64% 36% 54% ; */
+    animation: animateSquare2 25s linear infinite;
+}
+
+@keyframes animateSquare{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+@keyframes animateSquare2{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
+}
+
+.activate{
+    box-shadow: -1px 1px 4px 1px #D4D4D4;
+}
+
+.radial-progress:after{
+    display: none;
+}
+.hello :hover{
+    /* transform: translateY(-2500px); */
+    transition-duration: 5s;
+}
+.notch{
+    transform: scaleX(200%);
+    border-radius: 15px 15px 15px 15px;
+}
