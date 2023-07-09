@@ -1,10 +1,15 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GiNetworkBars } from "react-icons/gi";
 import { BiWifi } from "react-icons/bi";
 import { BsBatteryFull, BsFillArrowUpCircleFill } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Message = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
     const [timed, setTimed] = useState('')
     const [done, setDone] = useState('')
     const form = useRef();
@@ -38,8 +43,11 @@ const Message = () => {
         
     
     return (
-        <div className="w-96 mx-auto my-10">
-            <div className="mockup-phone relative ml-3 ">
+        <div className=" my-10">
+            <h1 className="text-2xl font-semibold text-center  text-rose-600">Send Email Here</h1>
+            <div className='w-20 mt-2 mb-10 h-1 mx-auto bg-indigo-400'></div>
+            <div className="flex justify-center items-center">
+            <div className="mockup-phone relative overflow-hidden " data-aos="zoom-in-up">
                     {/* <div className="camera"></div>  */}
                     <div className='w-28 h-6   bg-black  '></div>
                     <div className="absolute top-4 left-8 text-sm text-white font-semibold">{timed}</div>
@@ -66,31 +74,25 @@ const Message = () => {
                         </div>
                         <div className="h-0.5 w-11/12 bg-slate-400 mx-auto"></div>
                         <div className="flex mt-3 ml-2">
-                            <span className="text-gray-500 pl-2 mb-3">Name :</span> <input type="text" name="user_name" className="outline-none pl-2 mb-3"/>
+                            <span className="text-gray-500 pl-2 mb-3">Name :</span> <input type="text" name="user_name" className="bg-white outline-none pl-2 mb-3"/>
                             
                         </div>
                         <div className="h-0.5 w-11/12 bg-slate-400 mx-auto"></div>
                         <div className="flex mt-3 ml-2">
-                            <span className="text-gray-500 pl-2 mb-3">From :</span> <input type="email" className='outline-none text-sky-500 mb-3 ml-2 w-60' name="user_email" />
+                            <span className="text-gray-500 pl-2 mb-3">From :</span> <input type="email" className='bg-white outline-none text-sky-500 mb-3 ml-2 w-60' name="user_email" />
                             
                         </div>
                         <div className="h-0.5 w-11/12 bg-slate-400 mx-auto"></div>
-                        <textarea name="message" placeholder="message" className="w-full h-80 pl-2 outline-none" />
-                        
-      
+                        <textarea name="message" placeholder="message" className="bg-white w-full h-80 pl-4 outline-none" />
+               
         
-        
-        
-        
-        
-        
-        {/* <input type="submit" value="Send" /> */}
       </form>
     
                     </div>
                     </div>
                 </div>
                </div>
+            </div>
                
                
         </div>

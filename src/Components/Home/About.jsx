@@ -1,42 +1,44 @@
 import person from '../../../public/person.png'
-import facebook from '../../../public/facebook.svg'
-import twitter from '../../../public/twitter.svg'
-import linkedin from '../../../public/linkedin.svg'
+import { BiLogoMongodb, BiLogoReact } from "react-icons/bi";
+import { SiExpress } from "react-icons/si";
+import { FaNodeJs } from 'react-icons/fa';
+import { TbFidgetSpinner } from 'react-icons/tb';
+import { GiBeveledStar } from 'react-icons/gi';
+import color from '../../../public/colors.png'
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 
+//useEffect
 
 const About = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
     return (
-        <div className=" pt-16 " id="about">
-            <h1 className="text-2xl font-semibold text-center">ABOUT ME</h1>
+        <div className=" pt-16 w-11/12 mx-auto " id="about">
+            <h1 className="text-2xl font-semibold text-center  text-rose-600">ABOUT ME</h1>
+            <div className='w-20 mt-2 h-1 mx-auto bg-indigo-400'></div>
 
-            <div className='flex flex-col md:flex-row justify-center items-center gap-52'>
-                <div className='relative'>
-                    <div className="box3">
-                    </div>
-                    <div className="box1 absolute top-[35px] left-[35px]">
-                        <div className='w-4 h-4 rounded-full  bg-teal-400 absolute bottom-[98px]'></div>
-                    </div>
-                    <div className="box2  absolute top-[74px]  left-[75px]">
-                    <div className='w-4 h-4 rounded-full bg-teal-500  absolute bottom-[72px]'></div>
-                    </div>
-                    
-                    
-                    
-                    <div className='absolute top-[70px] right-[80px]  w-[240px] h-[240px] rounded-full bg-transparent bg-[#EFDCC0]'>
-                    
-                    <img src={person} alt="" className='w-[240px]  h-[240px] rounded-full' />
-                    </div>
-                    <div className='flex gap-5 absolute bottom-10 left-32'>
-                        {/* <a href="https://www.facebook.com/tanvir.haider.12177"><img src={facebook} alt="" className='w-8' /></a>
-                        <a href="#"><img src={twitter} alt=""  className='w-8'/></a>
-                        <a href="#"><img src={linkedin} alt="" className='w-8' /></a> */}
-                    </div>
-                    
-                    
+            <div className='flex flex-col md:flex-row justify-center  items-center md:gap-52'>
+                <div data-aos="fade-right" className='overflow-hidden relative my-10'>
+                <TbFidgetSpinner className='text-6xl absolute text-red-500 animate-spin'></TbFidgetSpinner>
+                <GiBeveledStar className='text-6xl absolute top-72 right-0 text-red-500 animate-spin'></GiBeveledStar>
+                <BiLogoMongodb className="text-5xl text-green-500 absolute left-10 top-20 icon-animate"></BiLogoMongodb>
+                <SiExpress className="text-5xl text-green-500 absolute left-20 top-20  icon-animate"></SiExpress>
+                <BiLogoReact className="text-red-500 z-50 text-5xl absolute animate5-spin top-20 left-60 to-zinc-50 animate-spin"></BiLogoReact>
+                <FaNodeJs className="text-5xl text-green-500 absolute top-20 left-72 icon-animate"></FaNodeJs>
+               
+                <div className=' h-96 md:w-96 w-[350px] sayem '>
+                <img src={person} alt="" className='absolute h-64 left-24 icon-animate'/>
+                <p className='absolute bottom-14 left-32 icon-animate text-4xl text-white'>MERN</p>
                 </div>
-                <div className='md:w-2/6 grid gap-5 text-center'>
-                    <p>Hi ! I’m Tanvir Haider. I am MERN Stack Web Developer, I have about six months of working experience on this field. If I discribe myself in one sentence then it will be "I am a speed learner." I love to learn new things.</p>
-                    <p>I started my coding journey since I was in high school. Coding is like a passion for me. I love to code all day long, </p>
+                   
+                </div>
+                <div data-aos="fade-left" className='md:w-2/6 overflow-x-hidden grid gap-5 text-center'>
+                    <p className='font-semibold'>Hi ! I’m Tanvir Haider. I am MERN Stack Web Developer, I have about six months of working experience on this field. If I discribe myself in one sentence then it will be "I am a speed learner." I love to learn new things.</p>
+                    <p className='font-semibold'>I started my coding journey since I was in high school. Coding is like a passion for me. I love to code all day long, </p>
                 </div>
             </div>
         </div>

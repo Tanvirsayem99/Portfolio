@@ -64,3 +64,60 @@
     transform: scaleX(200%);
     border-radius: 15px 15px 15px 15px;
 }
+
+.animate5-spin {
+    animation: spin 10s linear infinite;
+}
+.bg-animate {
+    animation: animate 10s linear infinite;
+}
+
+.bg-animate{
+    animation: animateColor 7s ease-in-out infinite ;
+  }
+  @keyframes animateColor{
+    0%, 100%{
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(50px);
+    }
+  }
+.icon-animate{
+    animation: animateColor2 5s ease-in-out infinite ;
+  }
+  @keyframes animateColor2{
+    0%, 100%{
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(10px);
+    }
+  }
+.cloud{
+    animation: animateColor5 10s ease-in-out infinite ;
+  }
+  @keyframes animateColor5{
+    0%, 100%{
+      transform: translatex(0px);
+    }
+    50%{
+      transform: translatex(-50px);
+    }
+  }
+  html{
+    overflow-x: hidden;
+  }
+  body{
+    overflow-x: hidden;
+  }
+    
+.sayem{
+    border-radius: 30% 70% 65% 35% / 30% 30% 70% 70%  ;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,66,1) 53%, rgba(0,212,255,1) 100%);
+}
+
+.navBg{
+  backdrop-filter: blur(5px);
+}
